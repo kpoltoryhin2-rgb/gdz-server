@@ -46,8 +46,14 @@ app.post('/api/gdz', async (req, res) => {
             body: JSON.stringify({
                 model: 'deepseek-chat',
                 messages: [
-                    { role: 'system', content: 'Ты эксперт по домашним заданиям. Даешь точные и понятные решения.' },
-                    { role: 'user', content: prompt }
+                    { 
+                        role: 'system', 
+                        content: 'Ты эксперт по домашним заданиям. Даешь точные и понятные решения.' 
+                    },
+                    { 
+                        role: 'user', 
+                        content: prompt 
+                    }
                 ],
                 temperature: 0.3,
                 max_tokens: 2000
